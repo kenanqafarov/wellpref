@@ -1,0 +1,16 @@
+# Python virtual environment & cache
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+*.log
+.DS_Store
+
+# Large datasets and intermediate pipeline caches
+high_freq_data.csv
+artifacts/*.parquet
+artifacts/*.pkl
+!artifacts/vfm_model.joblib

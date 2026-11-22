@@ -1,0 +1,9 @@
+Socar/Socar/artifacts/high_freq_clean.parquet filter=lfs diff=lfs merge=lfs -text
+Socar/Socar/artifacts/high_freq_raw.parquet filter=lfs diff=lfs merge=lfs -text
+Socar/Socar/artifacts/prepared.pkl filter=lfs diff=lfs merge=lfs -text
+Socar/Socar/high_freq_data.csv filter=lfs diff=lfs merge=lfs -text
+socar_eval_repo/artifacts/high_freq_clean.parquet filter=lfs diff=lfs merge=lfs -text
+socar_eval_repo/artifacts/high_freq_raw.parquet filter=lfs diff=lfs merge=lfs -text
+socar_eval_repo/artifacts/prepared.pkl filter=lfs diff=lfs merge=lfs -text
+socar_eval_repo/high_freq_data.zip filter=lfs diff=lfs merge=lfs -text
+wellperf-Platform/engine/artifacts/high_freq_raw.parquet filter=lfs diff=lfs merge=lfs -text

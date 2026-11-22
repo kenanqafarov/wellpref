@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  html.light {
+    /* Exact 13.140.158.231.nip.io Light Palette */
+    --wp-canvas: 248 250 252;
+    --wp-z-950: 255 255 255;
+    --wp-z-900: 241 245 249;
+    --wp-z-800: 226 232 240;
+    --wp-z-700: 203 213 225;
+    --wp-z-600: 100 116 139;
+    --wp-z-500: 100 116 139;
+    --wp-z-400: 71 85 105;
+    --wp-z-300: 51 65 85;
+    --wp-z-200: 30 41 59;
+    --wp-z-100: 15 23 42;
+    --wp-z-50: 2 6 23;
+    --radius: 0.625rem;
+  }
+
+  html.dark {
+    /* Exact 13.140.158.231.nip.io Dark Palette */
+    --wp-canvas: 11 15 25;
+    --wp-z-950: 17 24 39;
+    --wp-z-900: 26 35 53;
+    --wp-z-800: 38 51 77;
+    --wp-z-700: 59 130 246;
+    --wp-z-600: 100 116 139;
+    --wp-z-500: 148 163 184;
+    --wp-z-400: 168 181 202;
+    --wp-z-300: 203 213 225;
+    --wp-z-200: 226 232 240;
+    --wp-z-100: 243 246 252;
+    --wp-z-50: 255 255 255;
+    --radius: 0.625rem;
+  }
+}
+
+/* Proportional rem-based font scaling for arbitrary small text classes so XS/S/M/L/XL scales everything */
+.text-\[10px\] {
+  font-size: 0.65rem !important;
+  line-height: 1.35 !important;
+}
+.text-\[11px\] {
+  font-size: 0.72rem !important;
+  line-height: 1.4 !important;
+}
+
+body {
+  background-color: rgb(var(--wp-canvas));
+  color: rgb(var(--wp-z-100));
+  font-feature-settings: "tnum" 1;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Light mode contrast enhancement for semantic status texts */
+html.light .text-emerald-400 {
+  color: #047857 !important;
+}
+html.light .text-amber-400 {
+  color: #b45309 !important;
+}
+html.light .text-red-400 {
+  color: #b91c1c !important;
+}
+html.light .text-sky-400 {
+  color: #023F46 !important;
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.6);
+}

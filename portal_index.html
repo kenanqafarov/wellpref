@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SOCAR Hackathon Evaluation Platform</title>
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+  <div id="auth" class="auth-wrap">
+    <div class="auth-art">
+      <div class="brand light">
+        <img class="brand-logo" src="./assets/socar-logo.svg" alt="SOCAR">
+        <img class="brand-logo caspian-logo" src="./assets/Caspian_AI_Black_Smoothed%201.svg" width="1999" height="786" alt="Caspian AI Institute">
+      </div>
+      <div class="auth-caption">
+        <span class="eyebrow">SOCAR HACKATHON</span>
+        <h1>Evaluation platform for high-stakes technical submissions.</h1>
+        <p>SOCAR hackathon evaluation platform for secure VFM and PTA submissions.</p>
+        <div class="hero-case">
+          <span>Featured workflow · 2026</span>
+          <strong>One private workspace for teams, judges, submissions, and final rankings.</strong>
+          <small>Built around clear ownership: participants see their own phases, judges see current valid team results.</small>
+          <div class="hero-case-metrics">
+            <b>2</b><em>challenge phases</em>
+            <b>2</b><em>scored result formats</em>
+            <b>100%</b><em>role-isolated access</em>
+          </div>
+        </div>
+        <div class="art-rule"></div>
+        <div class="art-tags">
+          <span>01 / VFM</span>
+          <span>02 / PTA</span>
+          <span>PRIVATE JUDGING</span>
+        </div>
+      </div>
+    </div>
+    <div class="auth-panel">
+      <div class="auth-card">
+        <span class="tiny-overline">HACKATHON PORTAL</span>
+        <h2 id="auth-title">Welcome back</h2>
+        <p class="muted" id="auth-sub">Sign in to access your workspace.</p>
+        <form id="auth-form">
+          <label>Team or judge username
+            <input id="auth-team" required maxlength="48" autocomplete="username" placeholder="Enter team name">
+          </label>
+          <label>Password
+            <input id="auth-password" required type="password" autocomplete="current-password" placeholder="Enter password" minlength="10">
+          </label>
+          <button id="auth-submit" class="primary full" type="submit">Sign in <span>→</span></button>
+        </form>
+        <p id="auth-message" class="form-message" role="alert"></p>
+        <p class="muted footnote">Team and judge credentials are issued privately by the organizer.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="workspace" hidden>
+    <aside class="side">
+      <div class="brand">
+        <img class="brand-logo" src="./assets/socar-logo.svg" alt="SOCAR">
+        <img class="brand-logo caspian-logo" src="./assets/Caspian_AI_Black_Smoothed%201.svg" width="1999" height="786" alt="Caspian AI Institute">
+      </div>
+      <p class="nav-label">WORKSPACE</p>
+      <nav id="nav" aria-label="Main navigation"></nav>
+      <div class="side-bottom">
+        <div class="signed-user">
+          <div class="avatar" id="avatar">T</div>
+          <div>
+            <b id="user-team"></b>
+            <small id="user-role"></small>
+          </div>
+        </div>
+        <button id="logout-btn" class="side-logout">↪ &nbsp; Sign out</button>
+      </div>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">
+          <span>HACKATHON</span>
+          <span class="sep">/</span>
+          <strong id="page-breadcrumb">Overview</strong>
+        </div>
+        <div class="top-right">
+          <div class="top-avatar" id="top-avatar">T</div>
+        </div>
+      </header>
+      <main class="content" id="content"></main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./column-mapping.js"></script>
+  <script src="./comparison.js"></script>
+  <script src="./leaderboard.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
